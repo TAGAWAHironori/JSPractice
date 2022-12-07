@@ -1,1 +1,19 @@
-<button>push it</button>
+<button>起動する</button>
+<p>マシンは停止中です</p>
+<script>
+    const btn = document.querySelector('button');
+    const txt = document.querySelector('p');
+
+    btn.addEventListener('click', updateBtn);
+
+    function updateBtn() {
+        if (btn.textContent === '起動する') {
+            btn.textContent = '停止する';
+            txt.textContent = 'マシンが起動しました';
+        }
+        else {
+            btn.textContent = '起動する';
+            txt.textContent = 'マシンは停止中です';
+        }
+    }
+</script>
